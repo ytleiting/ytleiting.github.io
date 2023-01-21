@@ -17,14 +17,13 @@ setInterval(() => {
         password = defaultpassword;
     }
     if (mode == 1) {
+        const password_k_to_z = password.split('').map(p => String.fromCharCode((p.charCodeAt() % 15) + 97 + 11)).join('')
         output.value = encodeURIComponent(input.value).split('').map((item, index) => {
             code = item.charCodeAt()
-            let realpassword;
-            realpassword = password.split('').map(p => String.fromCharCode((p.charCodeAt() % 15) + 97 + 11)).join('')
             return (
                 code.toString().split('').map((c) =>
                     String.fromCharCode(97 + (parseInt(c) + password.split('')[index % password.split('').length].charCodeAt()) % 10)
-                ).join('') + realpassword[index % realpassword.length]
+                ).join('') + password_k_to_z[index % password_k_to_z.length]
             )
         }).join('');
     } else {
