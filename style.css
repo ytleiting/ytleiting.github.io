@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    font-family: 'Noto Serif TC';
+}
+
+.section1 {
+    height: 100vh;
+    width: 100vw;
+    background: url("media/background.png");
+    background-color: black;
+    background-size: cover;
+    background-position: center;
+}
+
+.section1 h1 {
+    padding-top: 35vh;
+    font-size: 9vw;
+    color: gold;
+    text-align: center;
+}
+
+.section2 {
+    width: 100%;
+    padding: 70px 0;
+    background: #000000;
+}
+
+.section2 h1 {
+    font-size: 6vw;
+    color: gold;
+    text-align: center;
+}
+
+.image-box {
+    padding-top: 5vh;
+    padding-left: 5vw;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.image-box div {
+    flex-basis: 25%;
+    text-align: center;
+    border-radius: 7px;
+    color: #fff;
+}
+
+.image-box img {
+    width: 18vw;
+    height: 18vw;
+    border-radius: 20%;
+}
+
+.image-box h2 {
+    font-size: 4vw;
+}
+
+.image-box p {
+    font-size: 1.5vw;
+}
+
+
+#menu {
+    width: 15vw;
+    height: 100vh;
+    background: #00a1b0;
+    right: -15vw;
+    top: 0;
+    position: fixed;
+    transition: 0.5s;
+    z-index: 2;
+}
+
+#menu nav ul li {
+    list-style: none;
+    margin: 3vh 3vh;
+}
+
+#menu nav ul li a {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 2vh;
+    text-decoration: none;
+}
+
+#menu-button {
+    width: 5vh;
+    height: 5vh;
+    right: 1vw;
+    top: 1vw;
+    cursor: pointer;
+    z-index: 3;
+    position: fixed;
+
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+}
