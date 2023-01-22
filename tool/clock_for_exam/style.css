@@ -1,0 +1,41 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.background {
+    width: 100vw;
+    height: 100vh;
+    background-color: white;
+}
+
+#nextclock {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 6vh;
+}
+
+#clocktext {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20vh;
+}
+
+button {
+    width: 5vh;
+    height: 5vh;
+    right: 1vw;
+    top: 1vw;
+    cursor: pointer;
+    z-index: 3;
+    position: fixed;
+
+    border-top-left-radius: 20%;
+    border-top-right-radius: 20%;
+    border-bottom-right-radius: 20%;
+    border-bottom-left-radius: 20%;
+}

@@ -1,0 +1,39 @@
+<html>
+
+<head>
+    <title>時鐘設定</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <section class="background">
+        <div>
+            <input type="checkbox" id="darkmode" onclick="darkmodeUpdate()">
+            <label>深色模式</label>
+        </div>
+        <div>
+            <input type="checkbox" id="shownextclock">
+            <label>顯示下次打鐘的時間</label>
+        </div>
+        <hr>
+        <div>
+            <button onclick="xchange(10)">+10秒</button>
+            <button onclick="xchange(-10)">-10秒</button>
+            <button onclick="xchange(1)">+1秒</button>
+            <button onclick="xchange(-1)">-1秒</button>
+        </div>
+        <label id="timelabel">不支援javascript或程式出現錯誤</label><br>
+        <hr>
+        <label id="clocktime">loading</label>
+        <label id="realtime">loading</label>
+        <hr>
+        <label>打鐘時間表(時:分 用空格逗點分開)</label>
+        <textarea id="timetable">loading</textarea>
+        <hr>
+        <button onclick="location.href = location.href.replace('/settings','')">設定完成</button>
+    </section>
+</body>
+<script src="/utils.js"></script>
+<script src="./script.js"></script>
+
+</html>
