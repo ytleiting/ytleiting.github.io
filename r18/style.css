@@ -22,9 +22,17 @@ button {
 
     background: none;
     font-size: 2vh;
-    color: aqua;
+
     width: 15vw;
     height: 3vw;
+}
+
+#yes {
+    color: rgb(255, 69, 69);
+}
+
+#no {
+    color: rgb(255, 255, 255);
 }
 
 video {
