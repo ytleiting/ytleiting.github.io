@@ -1,6 +1,7 @@
 var video = document.getElementById("video");
-var button = document.getElementById("button");
-button.addEventListener('click', (event) => {
+var yes = document.getElementById("yes");
+var no = document.getElementById("no");
+yes.addEventListener('click', (event) => {
     video.play();
     if (video.requestFullscreen) {
         video.requestFullscreen();
@@ -10,3 +11,6 @@ button.addEventListener('click', (event) => {
         video.msRequestFullscreen();
     }
 });
+no.addEventListener('click', (event) => {
+    location.href = 'https://www.i-gamer.net/';
+})
