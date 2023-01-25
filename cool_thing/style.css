@@ -22,7 +22,6 @@ button {
 }
 
 video {
-    visibility: hidden;
     position: fixed;
     left: 0;
     right: 0;
