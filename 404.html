@@ -1,0 +1,57 @@
+<html>
+
+<head>
+    <title>找不到該頁面</title>
+</head>
+
+<body>
+    <section>
+
+        <div>
+            <p style="
+                font-size: 140;
+            ">404</p>
+
+            <br>
+
+            <p style="
+                font-size: 70;
+            ">找不到頁面</p>
+
+            <br>
+
+            <p id="message">
+                找不到 {page} 頁面<br>
+                你可以嘗試
+            </p>
+            <a href="https://ytleiting.com/">回到頁首</a>
+        </div>
+    </section>
+</body>
+<style>
+    section {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+        text-align: center;
+        font-size: 30;
+    }
+
+    p {
+        margin: 0;
+    }
+</style>
+<script>
+    var message = document.getElementById('message');
+    message.innerHTML = message.innerHTML.replace('{page}', location.pathname)
+    if (location.pathname != location.pathname.toLowerCase()) {
+        const a = document.createElement('a');
+        a.href = location.pathname.toLowerCase();
+        a.innerHTML = '把連結改成小寫';
+        document.getElementsByTagName('div')[0].appendChild(a);
+    }
+</script>
+
+</html>
