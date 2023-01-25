@@ -1,0 +1,29 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+section {
+    background-color: black;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button {
+    border-radius: 10%;
+    background: none;
+    font-size: 2vh;
+    color: aqua;
+    width: 30vh;
+    height: 6vh;
+}
+
+video {
+    visibility: hidden;
+    position: fixed;
+    left: 0;
+    right: 0;
+}

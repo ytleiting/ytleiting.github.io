@@ -97,11 +97,10 @@
     width: 5vh;
     height: 5vh;
     right: 1vw;
+    position: fixed;
     top: 1vw;
     cursor: pointer;
     z-index: 3;
-    position: fixed;
-
     border-top-left-radius: 20%;
     border-top-right-radius: 20%;
     border-bottom-right-radius: 20%;
