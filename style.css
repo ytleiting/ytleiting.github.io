@@ -91,6 +91,7 @@
     font-size: 2vh;
     text-decoration: none;
     color: #fff;
+    cursor: pointer;
 }
 
 #menu-button {
