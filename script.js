@@ -27,7 +27,6 @@ rawFile.onreadystatechange = function () {
                 }
                 menu_ul.appendChild(line);
             })
-            document.getElementById("menu-ul").removeChild(document.getElementById("menu-first"));
         }
     }
 }
