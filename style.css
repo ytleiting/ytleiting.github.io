@@ -3,6 +3,25 @@
     font-family: 'Noto Serif TC';
 }
 
+section {
+    width: 100%;
+    padding: 70px 0;
+    background: #000000;
+}
+
+h1 {
+    font-size: 6vw;
+    color: gold;
+    text-align: center;
+}
+
+p {
+    font-size: 3vw;
+    color: #fff;
+    text-align: center;
+    margin: 2vw;
+}
+
 .section1 {
     height: 100vh;
     width: 100%;
@@ -19,19 +38,8 @@
     text-align: center;
 }
 
-.section2 {
-    width: 100%;
-    padding: 70px 0;
-    background: #000000;
-}
 
-.section2 h1 {
-    font-size: 6vw;
-    color: gold;
-    text-align: center;
-}
-
-.image-box {
+.section2 .image-box {
     padding-top: 5vh;
     padding-left: 5vw;
     width: 90%;
@@ -40,25 +48,32 @@
     justify-content: space-around;
 }
 
-.image-box div {
+.section2 .image-box div {
     flex-basis: 25%;
     text-align: center;
     border-radius: 7px;
     color: #fff;
 }
 
-.image-box img {
+.section2 .image-box img {
     width: 18vw;
     height: 18vw;
     border-radius: 20%;
 }
 
-.image-box h2 {
+.section2 .image-box h2 {
     font-size: 4vw;
 }
 
-.image-box p {
+.section2 .image-box p {
     font-size: 1.5vw;
+    margin: 0;
+}
+
+.section3 .anime-ranking {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
 }
 
 
