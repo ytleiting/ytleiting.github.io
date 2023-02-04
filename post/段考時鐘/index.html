@@ -1,0 +1,66 @@
+<html>
+
+<head>
+    <title>段考時鐘</title>
+    <link rel="stylesheet" href="/menu/menu.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@900&display=swap">
+</head>
+
+<body>
+    <!-- 內容 -->
+    <div>
+        <h1 id="">段考用可調整時間時鐘</h1>
+        <p><a href="http://ytleiting.com/tool/clock_for_exam/">網頁連結</a>  </p>
+        <p>我們班在段考的時候會在前面電視開線上時鐘<br />
+        在某次學校段考時，我們發現學校打鐘比線上時鐘慢1分29秒<br />
+        於是我就用10分鐘做了一個小網頁來調整時間<br />
+        段考結束後稍微修改一下放在這裡  </p>
+        <h2 id="-1">使用方法</h2>
+        <p>一開始連結應該長得像這樣：<br />
+        <code>clock_for_exam/?x=0&amp;darkmode=false&amp;timetable=disabled</code><br />
+        x是調整時間的秒數，如果x = -10 則時鐘會調整成真實時間的慢10秒<br />
+        darkmode是深色模式，開啟為true，關閉為false<br />
+        timetable是每次打鐘的時間，不想顯示就用disabled<br />
+        格式為：時:分,時:分,時:分,時:分<br />
+        底下有更快設定的方法  </p>
+        <h2 id="-2">快速設定</h2>
+        <p>點擊右上角的設定會切換到設定頁面<br />
+        <img src="/media/post/settings.jpg" width="340" height="320"></p>
+    </div>
+    <!-- 選單 -->
+    <div id="menu" class="menu">
+        <nav>
+            <ul id="menu-ul">
+            </ul>
+        </nav>
+    </div>
+    <!-- 選單2 -->
+    <div id="menu2" class="menu">
+        <nav>
+            <ul id="menu2-ul">
+            </ul>
+        </nav>
+    </div>
+    <!-- 選單按鈕 -->
+    <div id="menu-button-div">
+        <img src="/media/menu-button.png" id="menu-button">
+    </div>
+</body>
+<style>
+    body {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        background-color: black;
+        color: white;
+    }
+
+    code {
+        border: 4;
+        border-color: white;
+        color:aqua;
+    }
+</style>
+<script src="/menu/menu.js"></script>
+
+</html>

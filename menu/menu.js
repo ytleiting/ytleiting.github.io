@@ -9,7 +9,7 @@ const menu2_ul = document.getElementById('menu2-ul');
     生成Menu
 */
 var rawFile = new XMLHttpRequest();
-rawFile.open("GET", 'menu.txt', false);
+rawFile.open("GET", '/menu/menu.txt', false);
 rawFile.onreadystatechange = function () {
     if (rawFile.readyState === 4) {
         if (rawFile.status === 200 || rawFile.status == 0) {
@@ -38,22 +38,31 @@ rawFile.send(null);
 var menu2size = 1.2;
 var menuWidth;
 function updateMenuWidth() {
-    menuWidth = window.innerHeight * 0.1 + window.window.innerWidth * 0.15
+    menuWidth = window.innerHeight * 0.2 + window.window.innerWidth * 0.1
     menu.style.width = `${menuWidth}px`
     menu2.style.width = `${menuWidth * menu2size}px`
+    menu2.style.right = `-${menuWidth * menu2size}px`;
+    menu.style.right = `-${menuWidth}px`;
 }
-menu.style.right = `-${menuWidth}px`
-menu2.style.right = `-${menuWidth * menu2size}px`
+function closeMenu() {
+    menu2.style.right = `-${menuWidth * menu2size}px`;
+    menu.style.right = `-${menuWidth}px`;
+    menuButton.getElementsByTagName('img').item(0).src = "/media/menu-button.png"
+    menu_ul.innerHTML.replaceAll('>&gt; ', '>')
+}
+updateMenuWidth();
+closeMenu();
 
-addEventListener("resize", updateMenuWidth());
+addEventListener("resize", () => {
+    updateMenuWidth();
+    closeMenu();
+});
 menuButton.onclick = () => {
-    if (menu.style.right == `-${menuWidth}px`) {
-        menu.style.right = '0px';
-        menuButton.getElementsByTagName('img').item(0).src = "media/menu-cancel.png"
+    if (menu.style.right == '0px') {
+        closeMenu();
     } else {
-        menu2.style.right = `-${menuWidth * menu2size}px`;
-        menu.style.right = `-${menuWidth}px`;
-        menuButton.getElementsByTagName('img').item(0).src = "media/menu-button.png"
+        menu.style.right = '0px';
+        menuButton.getElementsByTagName('img').item(0).src = "/media/menu-cancel.png"
     }
 }
 
