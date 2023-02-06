@@ -48,7 +48,11 @@ function closeMenu() {
     menu2.style.right = `-${menuWidth * menu2size}px`;
     menu.style.right = `-${menuWidth}px`;
     menuButton.getElementsByTagName('img').item(0).src = "/media/menu-button.png"
-    menu_ul.innerHTML.replaceAll('>&gt; ', '>')
+    for (const line of menu_ul.children) {
+        if (line.firstChild.textContent.startsWith(`> `)) {
+            line.firstChild.innerHTML = line.firstChild.innerHTML.replace(`&gt; `, '')
+        }
+    }
 }
 updateMenuWidth();
 closeMenu();
